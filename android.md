@@ -86,3 +86,30 @@ Mają określone granice i kolor tła (także przezroczysty).
 
 ## Android Inventor
 - http://appinventor.mit.edu/explore/
+
+## Rozmiar ekranu
+Rzeczywisty rozmiar fizyczny, mierzony jako przekątna ekranu. Dla uproszczenia system Android grupuje wszystkie rzeczywiste rozmiary ekranu na cztery ogólne rozmiary: mały, normalny, duży i bardzo duży.
+
+## Gęstość ekranu
+Ilość pikseli w fizycznym obszarze ekranu; zwykle określane jako dpi (kropki na cal). Na przykład ekran o „niskiej” gęstości ma mniej pikseli w danym obszarze fizycznym, w porównaniu do ekranu o „normalnej” lub „wysokiej” gęstości. Dla uproszczenia system Android grupuje wszystkie rzeczywiste gęstości ekranu na sześć ogólnych gęstości: niska, średnia, wysoka, bardzo wysoka, bardzo wysoka i bardzo wysoka.
+
+## Orientacja
+Orientacja ekranu z punktu widzenia użytkownika. Jest to krajobraz lub portret, co oznacza, że proporcje ekranu są odpowiednio szerokie lub wysokie. Należy pamiętać, że nie tylko różne urządzenia domyślnie działają w różnych orientacjach, ale orientacja może się zmienić w czasie wykonywania, gdy użytkownik obraca urządzenie. Rozdzielczość Całkowita liczba fizycznych pikseli na ekranie. Podczas dodawania obsługi wielu ekranów aplikacje nie działają bezpośrednio z rozdzielczością; aplikacje powinny dotyczyć wyłącznie rozmiaru i gęstości ekranu, określonych przez ogólne grupy wielkości i gęstości. Piksel niezależny od gęstości (dp) Wirtualna jednostka pikseli, której należy użyć podczas definiowania układu interfejsu użytkownika, aby wyrazić wymiary lub pozycję układu w sposób niezależny od gęstości. Piksel niezależny od gęstości odpowiada jednemu pikselowi fizycznemu na ekranie o rozdzielczości 160 dpi, który jest podstawową gęstością przyjętą przez system dla ekranu o „średniej” gęstości. W czasie wykonywania system w przejrzysty sposób obsługuje dowolne skalowanie jednostek dp, zależnie od rzeczywistej gęstości używanego ekranu. Konwersja jednostek dp na piksele ekranowe jest prosta: px = dp * (dpi / 160). Na przykład na ekranie o rozdzielczości 240 dpi 1 dp to 1,5 piksela fizycznego. Podczas definiowania interfejsu użytkownika aplikacji należy zawsze używać jednostek dp, aby zapewnić prawidłowe wyświetlanie interfejsu użytkownika na ekranach o różnych gęstościach.
+
+## Jednostki
+- px (piksele) - odpowiada rzeczywistym pikselom na ekranie.
+- w (cale) - w oparciu o fizyczny rozmiar ekranu. 1 cal = 2,54 centymetra
+- mm (milimetry) - w oparciu o fizyczny rozmiar ekranu.
+- pt (punkty) - 1/72 cala w oparciu o fizyczny rozmiar ekranu.
+- dp lub dip (piksele niezależne od gęstości) - abstrakcyjna jednostka oparta na fizycznej gęstości ekranu. Jednostki te odnoszą się do ekranu o rozdzielczości 160 dpi, więc jeden dp to jeden piksel na ekranie o rozdzielczości 160 dpi. Stosunek dp-do piksela zmienia się wraz z gęstością ekranu, ale niekoniecznie w proporcji bezpośredniej. Uwaga: Kompilator akceptuje zarówno „dip”, jak i „dp”, chociaż „dp” jest bardziej spójny z „sp”.
+- sp (piksele niezależne od skali) - jest to jak jednostka dp, ale jest również skalowane według preferencji użytkownika dotyczących rozmiaru czcionki. Zaleca się korzystanie z tego urządzenia podczas określania rozmiarów czcionek, aby dopasować je zarówno do gęstości ekranu, jak i preferencji użytkownika. Od zrozumienia niezależności gęstości w Androidzie: 
+
+~~~
+Jednostka 	Opis 	    Jednostki na cal fizyczny 	Niezależność od gęstości 	Ten sam rozmiar fizyczny na każdym ekranie
+px 	        Piksele 	Różni się 	Nie 	Nie
+w 	Cale 	1 	tak 	tak
+mm 	Milimetry 	25,4 	tak 	tak
+pt 	Zwrotnica 	72 	tak 	tak
+dp 	Niezależne piksele 	~ 160 	tak 	Nie
+sp. z oo 	Skaluj niezależne piksele 	~ 160 	tak 	Nie 
+~~~
