@@ -1,4 +1,4 @@
-# Android
+# Android 25.01.2022 (Zabłudów)
 
 ## Zasady tworzenia aplikacji
 Musimy odpowiedzieć na pytanie „dlaczego użytkownik miałby z niej korzystać?”.
