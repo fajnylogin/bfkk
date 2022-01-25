@@ -13,3 +13,5 @@
 3. reklamacja towaru / możliwość rezygnacji
 4. zamawianie kilku wypieków z możliwością podziału kosztów na kilka osób
 5. zakładanie konta
+6. elo ziom
+7. 
