@@ -1,7 +1,7 @@
 # Zadania
 
 ## Zadanie 1
-1 + 1 = 
+1 + 1 = 2
 
 ## Zadanie 2
 2 + 2 = 
