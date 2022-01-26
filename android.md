@@ -115,7 +115,7 @@ Podczas definiowania interfejsu użytkownika aplikacji należy zawsze używać j
 - pt (punkty) - 1/72 cala w oparciu o fizyczny rozmiar ekranu.
 - dp lub dip (piksele niezależne od gęstości) - abstrakcyjna jednostka oparta na fizycznej gęstości ekranu. Jednostki te odnoszą się do ekranu o rozdzielczości 160 dpi, więc jeden dp to jeden piksel na ekranie o rozdzielczości 160 dpi. Stosunek dp-do piksela zmienia się wraz z gęstością ekranu, ale niekoniecznie w proporcji bezpośredniej. Uwaga: Kompilator akceptuje zarówno „dip”, jak i „dp”, chociaż „dp” jest bardziej spójny z „sp”.
 - sp (piksele niezależne od skali) - jest to jak jednostka dp, ale jest również skalowane według preferencji użytkownika dotyczących rozmiaru czcionki. Zaleca się korzystanie z tego urządzenia podczas określania rozmiarów czcionek, aby dopasować je zarówno do gęstości ekranu, jak i preferencji użytkownika. Od zrozumienia niezależności gęstości w Androidzie: 
-`
+~~~
 Jednostka   Opis                        Jednostki na cal fizyczny   Niezależność od gęstości    Ten sam rozmiar fizyczny na każdym ekranie
 px          Piksele 	                  Różni się 	                nie 	                      nie
 w 	        Cale 	                      1 	                        tak 	                      tak
@@ -123,7 +123,7 @@ mm 	        Milimetry 	                25,4 	                      tak 	        
 pt 	        Punkty 	                    72 	                        tak 	                      tak
 dp 	        Niezależne piksele 	        ~ 160 	                    tak 	                      nie
 sp          Skaluj niezależne piksele 	~ 160 	                    tak 	                      nie 
-`
+~~~
 
 ## Android icons dla różnych rozdzielczości ekranu urządzenia.
 ~~~
